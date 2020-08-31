@@ -1,0 +1,211 @@
+/*******************  BASE STYLES  ****************************/
+body
+    {
+        color: whitesmoke;
+        font-family: 'Karla', sans-serif;
+        width: 1400px;
+        background-color: black;
+    }
+/*********************  GRID  ********************************/
+.full-width
+    {
+        width: 1200px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+.half-width
+    {
+        width: 600px;
+        float: left;
+    }
+.third-width
+    {
+        width: 380px;
+        float: left;
+    }
+/************************** HEADER   ******************************/
+#header
+    {
+        background: black;
+    }
+       
+#header p
+    {
+        font-family: 'Karla', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        padding-right: 20px;
+        text-align: left;
+        color: whitesmoke;
+        margin:  0 100px;
+    }
+nav ul li
+    {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 0px;
+        padding-left: 30px;
+    }
+nav ul li a
+    {
+        font-family: 'Karla', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        padding: 20px;
+        text-align: right;
+        color: whitesmoke;
+    }
+
+#banner
+    {
+        background-position-y: 150px;
+        background-position: center;
+        background-size: cover;
+        background: url(../img/hero-background.png);
+        height: 800px;
+        
+    }
+ #banner h1
+    {
+        clear: both;
+        font-family: 'Comic Neue', cursive;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 72px;
+        color: whitesmoke;
+        padding: 200px 0 0 100px;
+    }
+#banner h1 span
+    {
+        font-family: 'Comic Neue', cursive;
+        font-size: 72px;
+        font-style: italic;
+        color: #fa0075;
+    }
+/********************************* WORK  **********************************/
+#work
+    {
+        height: 1550px;
+    }
+#work .half-width 
+    {
+        height: 350px;
+        width: 550px;
+        padding: 50px 20px;
+        float: left;
+    }
+#work h1
+    {
+        font-family: 'Comic Neue', cursive;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        color: #fa0075;
+    }
+
+#work h2
+    {
+        font-family: 'Karla', sans-serif;
+        font-size: 24px;
+        color: whitesmoke;
+        text-align: left;
+        padding-left: 30px;
+    }
+#work h3
+    {
+        font-family: 'Karla', sans-serif;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 30px;
+    }
+#work p
+    {
+        font-family:'Karla', sans-serif;
+        font-size: 18px;
+        font-weight:400;
+        color: whitesmoke;
+        text-align: justify;
+        padding: 40px;
+    }
+/*********************************  ABOUT  ********************************/
+#about
+    {
+        height: 550px;
+        background: url(../img/about-me.png);
+    }
+#about h2
+    {
+        font-family: 'Comic Neue', cursive;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        color: #fa0075;
+    }
+#about h3
+    {
+        font-family: 'Karla', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color:#fa0075;
+    }
+#about p
+    {
+        font-family:'Karla', sans-serif;
+        font-size: 18px;
+        font-weight:400;
+        color: black;
+        padding-left: 75px;
+    
+    }
+/************************************   CONTACT   ****************************/
+#contact
+    {
+        height: 400px;
+        align-content: center;
+    }
+#contact h2
+    {
+        font-family: 'Comic Neue', cursive;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        color: #fa0075;
+    }
+#contact h3 
+    {
+        text-align: center
+    }
+#contact .icon
+    {
+        display: inline-block;
+        padding: 20px;
+    }
+#contact p
+    {
+        color: whitesmoke;
+        text-align:center;
+    }
+/***********************************************  MY-STORY **************************************/
+#story .full-width
+    {
+        margin: 20px;
+        width: 1200px;
+        overflow: auto;
+    }
+#story .half-width
+    {
+        padding-left: 20px;
+        width: 550px;
+        overflow: auto;
+    }
+#story h2
+    {
+        text-align: center;
+        font-size: 24px;
+    }
+#story p
+    {
+        text-align: justify;
+        font-size: 20px;
+    }
