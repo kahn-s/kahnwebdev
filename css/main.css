@@ -1,211 +1,641 @@
-/*******************  BASE STYLES  ****************************/
-body
-    {
-        color: whitesmoke;
-        font-family: 'Karla', sans-serif;
-        width: 1400px;
-        background-color: black;
-    }
-/*********************  GRID  ********************************/
-.full-width
-    {
-        width: 1200px;
-        margin: 0 auto;
-        overflow: auto;
-    }
-.half-width
-    {
-        width: 600px;
-        float: left;
-    }
-.third-width
-    {
-        width: 380px;
-        float: left;
-    }
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**********   BASE STYLES   MOBILE ****************/
+html {
+  font-size: 16px;
+}
+.page-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 767px;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-size: 1em;
+  color: whitesmoke;
+  font-family: "Karla", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Comic Neue", cursive;
+  font-size: 2.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  color: whitesmoke;
+}
+img,
+.hero-image {
+  width: 100%;
+  height: auto;
+}
 /************************** HEADER   ******************************/
-#header
-    {
-        background: black;
-    }
-       
-#header p
-    {
-        font-family: 'Karla', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        padding-right: 20px;
-        text-align: left;
-        color: whitesmoke;
-        margin:  0 100px;
-    }
-nav ul li
-    {
-        display: inline-block;
-        list-style-type: none;
-        margin-right: 0px;
-        padding-left: 30px;
-    }
-nav ul li a
-    {
-        font-family: 'Karla', sans-serif;
-        font-size: 30px;
-        font-weight: 700;
-        padding: 20px;
-        text-align: right;
-        color: whitesmoke;
-    }
+#header .content-wrapper {
+  justify-content: center;
+  flex-flow: row wrap;
+}
 
-#banner
-    {
-        background-position-y: 150px;
-        background-position: center;
-        background-size: cover;
-        background: url(../img/hero-background.png);
-        height: 800px;
-        
-    }
- #banner h1
-    {
-        clear: both;
-        font-family: 'Comic Neue', cursive;
-        font-style: italic;
-        font-weight: 700;
-        font-size: 72px;
-        color: whitesmoke;
-        padding: 200px 0 0 100px;
-    }
-#banner h1 span
-    {
-        font-family: 'Comic Neue', cursive;
-        font-size: 72px;
-        font-style: italic;
-        color: #fa0075;
-    }
+#header .title p {
+  font-family: "Comic Neue", cursive;
+  font-size: 1.875em;
+  font-weight: bold;
+  text-align: center;
+  color: #4eeaec;
+  margin: 15px 100px;
+}
+
+#header nav {
+  font-size: 0.75em;
+  width: 80%;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#header nav ul li {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  color: #fa0075;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: "Comic Neue", cursive;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3em;
+  color: whitesmoke;
+}
+
+.hero h1 span {
+  font-family: "Comic Neue", cursive;
+  font-size: 2em;
+  font-style: italic;
+  color: #fa0075;
+}
 /********************************* WORK  **********************************/
-#work
-    {
-        height: 1550px;
-    }
-#work .half-width 
-    {
-        height: 350px;
-        width: 550px;
-        padding: 50px 20px;
-        float: left;
-    }
-#work h1
-    {
-        font-family: 'Comic Neue', cursive;
-        font-weight: 700;
-        font-size: 36px;
-        text-align: center;
-        color: #fa0075;
-    }
+#work .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
 
-#work h2
-    {
-        font-family: 'Karla', sans-serif;
-        font-size: 24px;
-        color: whitesmoke;
-        text-align: left;
-        padding-left: 30px;
-    }
-#work h3
-    {
-        font-family: 'Karla', sans-serif;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 30px;
-    }
-#work p
-    {
-        font-family:'Karla', sans-serif;
-        font-size: 18px;
-        font-weight:400;
-        color: whitesmoke;
-        text-align: justify;
-        padding: 40px;
-    }
+#work .description,
+#work .thumbnail {
+  box-sizing: border-box;
+}
+#work .description {
+  text-align: justify;
+}
+#work h1 {
+  color: #fa0075;
+}
+
 /*********************************  ABOUT  ********************************/
-#about
-    {
-        height: 550px;
-        background: url(../img/about-me.png);
-    }
-#about h2
-    {
-        font-family: 'Comic Neue', cursive;
-        font-weight: 700;
-        font-size: 36px;
-        text-align: center;
-        color: #fa0075;
-    }
-#about h3
-    {
-        font-family: 'Karla', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        color:#fa0075;
-    }
-#about p
-    {
-        font-family:'Karla', sans-serif;
-        font-size: 18px;
-        font-weight:400;
-        color: black;
-        padding-left: 75px;
-    
-    }
+
+#about .content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #b5b3af;
+  width: 100%;
+}
+#about .content-wrapper-heading {
+  width: 100%;
+}
+
+#about h1 {
+  color: #fa0075;
+  width: 100%;
+  margin: 0;
+}
+#about h2 {
+  color: whitesmoke;
+  width: 100%;
+  margin: 0 10px;
+}
+
+#about p {
+  font-weight: 400;
+  color: black;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#about .description {
+  justify-content: center;
+  align-items: center;
+}
+#about img {
+  width: 100%;
+  height: auto;
+}
+
 /************************************   CONTACT   ****************************/
-#contact
-    {
-        height: 400px;
-        align-content: center;
-    }
-#contact h2
-    {
-        font-family: 'Comic Neue', cursive;
-        font-weight: 700;
-        font-size: 36px;
-        text-align: center;
-        color: #fa0075;
-    }
-#contact h3 
-    {
-        text-align: center
-    }
-#contact .icon
-    {
-        display: inline-block;
-        padding: 20px;
-    }
-#contact p
-    {
-        color: whitesmoke;
-        text-align:center;
-    }
+#contact .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0;
+}
+
+#contact h1 {
+  width: 100%;
+  color: #fa0075;
+}
+
+#contact h3,
+#contact p {
+  width: 100%;
+}
+
+#contact div {
+  flex-basis: 80%;
+}
+
+#contact .social {
+  display: flex;
+}
+
+#contact .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#contact p {
+  color: whitesmoke;
+  text-align: center;
+}
 /***********************************************  MY-STORY **************************************/
-#story .full-width
-    {
-        margin: 20px;
-        width: 1200px;
-        overflow: auto;
-    }
-#story .half-width
-    {
-        padding-left: 20px;
-        width: 550px;
-        overflow: auto;
-    }
-#story h2
-    {
-        text-align: center;
-        font-size: 24px;
-    }
-#story p
-    {
-        text-align: justify;
-        font-size: 20px;
-    }
+.story-page-wrapper {
+  font-size: 1em;
+  color: whitesmoke;
+  font-family: "Karla", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+  margin: 15px;
+}
+.story-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#my-story h2 {
+  font-family: "Karla", sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#story-header .story-content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+#story-header p {
+  font-size: 3em;
+}
+#story-header nav {
+  display: flex;
+  line-height: 2;
+}
+#story-header nav a {
+  font-size: 1em;
+  text-align: right;
+  color: #9dbfe3;
+}
+.story-title {
+  display: flex;
+}
+
+#my-story {
+  background-color: #3451a5;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.story-content div {
+  width: 100%;
+}
+.story-content p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-align: justify;
+  padding: 40px 200px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/*========================================================================
+                              TABLET STYLES
+============================================================================*/
+/* General Styles*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+  #header .content-wrapper {
+    justify-content: space-around;
+  }
+
+  #header .title {
+    display: flex;
+  }
+
+  #header p {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #work h1,
+  #about h1,
+  #contact h1 {
+    width: 100%;
+    font-size: 3em;
+  }
+  #work .title {
+    width: 100%;
+  }
+  #work .description {
+    width: 70%;
+    justify-content: center;
+  }
+
+  #work h2,
+  #about h2 {
+    font-size: 2em;
+  }
+
+  #work h3,
+  #about h3,
+  #contact h3 {
+    font-size: 1.75em;
+  }
+
+  #work p {
+    font-size: 1.5em;
+  }
+
+  #about .description {
+    padding: 15px 100px;
+  }
+  #about p,
+  #contact p {
+    font-size: 1.5em;
+  }
+
+  #contact p {
+    padding: 0;
+  }
+
+  #contact .icon {
+    align-items: center;
+  }
+}
+/*========================================================================
+                              DESKTOP STYLES
+============================================================================*/
+@media only screen and (min-width: 1200px) {
+  #header nav {
+    font-size: 1.25em;
+  }
+  #header .title p {
+    font-size: 3em;
+  }
+
+  #about p,
+  #contact p {
+    font-size: 1.5em;
+  }
+  #about h1 {
+    padding: 50px 0;
+  }
+
+  #about p {
+    padding: 0;
+  }
+  .story-content p {
+    padding: 50px 100px;
+  }
+}
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
